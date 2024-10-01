@@ -48,7 +48,7 @@ const StudentAttendance = ({ situation }) => {
         if (userDetails && userDetails.sclassName && situation === "Student") {
             dispatch(getSubjectList(userDetails.sclassName._id, "ClassSubjects"));
         }
-    }, [dispatch, userDetails]);
+    }, [dispatch, params]); // Add dispatch and params to the dependency array
 
     const changeHandler = (event) => {
         const selectedSubject = subjectsList.find(
